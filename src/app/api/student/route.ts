@@ -86,6 +86,7 @@ export const PUT = async (request: NextRequest) => {
     (std) => std.studentId === body.studentId
   );
   if (foundIndex === -1) {
+   // console.log('Student ID not found:', body.studentId)
     return NextResponse.json(
       {
         ok: false,
